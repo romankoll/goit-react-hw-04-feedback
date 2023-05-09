@@ -1,4 +1,5 @@
 import React from 'react';
+import css from 'components/FeedbackOptions/FeedbackOptions.module.css';
 
 const FeedbackOptions = ({
   options,
@@ -8,11 +9,11 @@ const FeedbackOptions = ({
   //   onIncrementBad,
 }) => {
   return (
-    <ul>
+    <ul className={css.feedbackList}>
       {options.map(option => (
         <li key={option}>
           <button
-            className="statBtn"
+            className={css.statBtn}
             type="button"
             onClick={() => onLeaveFeedback(option)}
           >
